@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Bing's Blog]]></title>
+  <link href="http://binglim.github.com/atom.xml" rel="self"/>
+  <link href="http://binglim.github.com/"/>
+  <updated>2013-01-26T23:31:44+08:00</updated>
+  <id>http://binglim.github.com/</id>
+  <author>
+    <name><![CDATA[Bing]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[每一条龙，都有自己的湾]]></title>
+    <link href="http://binglim.github.com/blog/2013/01/26/trace-of-wenzhou-longwan/"/>
+    <updated>2013-01-26T20:00:00+08:00</updated>
+    <id>http://binglim.github.com/blog/2013/01/26/trace-of-wenzhou-longwan</id>
+    <content type="html"><![CDATA[<p>“每一条龙，都有自己的湾。”这是万科一楼盘的广告语。龙湾本是一小村庄，不知为何变成了区名，吞噬了永强。然而，在这片土地上成长起来的人们，显然对“永强”这两个字更有归属感。十几年前，部分身份证以330304打头的人突然从瓯海人变成了龙湾人，从此瓯海无海，延续了几十年的行政地理割裂开来。</p>
+
+<!-- more -->
+
+
+<p>整个永强像是一个工业区，可以抱怨的似乎太多：无数的工厂，逼仄的街道，高企的物价，混乱的交通。尽管远离市中心，却失去了成为世外桃源的一切条件。然而它终究在变好，城市化是当今社会不可逆转的过程。无论将来身在何处，总还是希望家乡能够有所发展。城市向东，奥体、轨道交通等工程已经描绘出了一幅蓝图，有人说，几年后，这里会变成城市。</p>
+
+<p>每次回家，都会想出去逛一圈，它的变化十分迅速，倘若我离家几年，回来应该会有一种陌生的感觉吧。一直觉得，永强的商业是与其经济极不对称的，即便宝马奔驰满街，本地也没有一个像样的商场，以至于万达刚开业人气如此火爆。好歹终于有个能逛的地方了。</p>
+
+<iframe src="https://skydrive.live.com/embed?cid=690DC627810F3B99&resid=690DC627810F3B99%21153&authkey=AJjRw3-KYELKGic" height="240" frameborder="0" scrolling="no"></iframe>
+
+
+<p>万达的速度确实给人一种大跃进的快感，从拿地到开业只花了20个月，让人很期待二期。</p>
+
+<iframe src="https://skydrive.live.com/embed?cid=690DC627810F3B99&resid=690DC627810F3B99%21117&authkey=AJibdph--vY0UT0" height="240" frameborder="0" scrolling="no"></iframe>
+
+
+<p>现在的永强，是一个大工地，到处都是脚手架和吊车，每次回来，都能看见很多新楼。</p>
+
+<iframe src="https://skydrive.live.com/embed?cid=690DC627810F3B99&resid=690DC627810F3B99%21123&authkey=ACNYUMFHkg3v9_E" height="240" frameborder="0" scrolling="no"></iframe>
+
+
+<p>然而有时候又不得不吐槽一下开发商的审美。</p>
+
+<iframe src="https://skydrive.live.com/embed?cid=690DC627810F3B99&resid=690DC627810F3B99%21138&authkey=AJ6tgIJWftwjQjQ" height="240" frameborder="0" scrolling="no"></iframe>
+
+
+<p></p>
+
+<iframe src="https://skydrive.live.com/embed?cid=690DC627810F3B99&resid=690DC627810F3B99%21125&authkey=AHcIMpOLTpIYevw" height="240" frameborder="0" scrolling="no"></iframe>
+
+
+<p>明年近日，会看到什么样的永强？</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Notes of Archlinux]]></title>
+    <link href="http://binglim.github.com/blog/2013/01/23/notes-of-installing-archlinux/"/>
+    <updated>2013-01-23T20:00:00+08:00</updated>
+    <id>http://binglim.github.com/blog/2013/01/23/notes-of-installing-archlinux</id>
+    <content type="html"><![CDATA[<p>回家之后日子过得舒坦了，也就开始了折腾。加上移动硬盘到手了，索性就把电脑里的东西清了个干净，装了一下archlinux，紧接着又跟着超哥的足迹，把他推荐的软件都装了个遍，虽然也不是很多。期间也试了不少东西，颇有收获。随便记录一下期间的一些内容，也许以后还会用到。</p>
+
+<hr />
+
+<h2>关于窗口管理器</h2>
+
+<p>刚开始装了个openbox的，也搞了各种配置，后来某位少年说跟windows没什么差的，遂装13心理发作，索性玩一下tiling window的，于是试了一下xmonad，stumpwm，awesome。刚开始是先装了xmonad的，<!-- more -->但看到xmonad的配置文件那一坨坨的语句感到很有压力，恰逢fcitx在终端运行的部分程序中无法使用中，按照wiki以及各种论坛中的配置与方法试了好久也不行，但在openbox下却没问题，于是就想换个WM看看行不行。于是下了个stumpwm。这东西一上来就给人一种很不顺手的感觉，没玩几下迅速删除。紧接着下了个awesome，其实awesome给人的感觉挺好的，但总感觉窗口的排布不如xmonad讨人喜欢，于是又换回xmonad，至于输入法，只要不是通过终端启动的程序都是能正常工作的，所以就给那些之前无法正常工具的程序都绑定了快捷键。xmonad的配置也只是按照官方给的example简单的改了一下，还未掌握haskell的要领。</p>
+
+<h2>安装虚拟机virtualbox</h2>
+
+<p>其实还有个.net相关的作业没有做，但windows已经删掉了，所以怒装了一个virtualbox，过程很简单，但wiki好像写了不少，反正也用不到，没仔细看。</p>
+
+<pre><code>pacman -S vitualbox
+gpasswd -a username vboxusers
+modprobe vboxdrv
+</code></pre>
+
+<h2>声音独占</h2>
+
+<p>其实从ubuntu换到archlinux还是遇到了不少问题的，本身就是一只小菜鸟，对linux毕竟还不是很熟悉，比如默认的系统不会自动加载oss模块，所以不同两个程序同时播放声音，加载一下snd_pcm_oss,snd_seq_oss,snd_pcm_oss模块就可以解决这个问题了。把要自动加载的模块写到一个.conf文件放到/etc/modules-load.d文件夹下就可以不用手动加载了。</p>
+
+<h2>MATLAB等程序灰色的一片</h2>
+
+<p>如果你基本复制了官方的配置文件，那么把defaultConfig里的startupHook改成  startupHook = setWMName &#8220;LG3D&#8221;  就可以了。</p>
+
+<h2>还有很多，下次有空再写吧………</h2>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[折腾，是我们对应然之事的承诺]]></title>
+    <link href="http://binglim.github.com/blog/2013/01/12/restart-again/"/>
+    <updated>2013-01-12T19:59:00+08:00</updated>
+    <id>http://binglim.github.com/blog/2013/01/12/restart-again</id>
+    <content type="html"><![CDATA[<p>这是一个看似很文艺的标题，来源于前段时间一个很火的和谐事件。
+博客再一次大换血了，虽然离上一次并不是很久。
+由于各种原因，换回octopress了。</p>
+
+<h3>这次更换带来的好处也很明显了：</h3>
+
+<ul>
+<li>省了一笔费用，且基本没有数据丢失的顾虑</li>
+</ul>
+
+
+<!-- more -->
+
+
+<ul>
+<li>写博客变得更方便，markdown神马的，还不用登录后台</li>
+<li>静态页面快快的访问速度，文章的生成速度也比较快</li>
+<li>还有很多的&#8230;</li>
+</ul>
+
+
+<h3>缺点呢：</h3>
+
+<ul>
+<li>用手机发博客不可能了，换电脑也疼</li>
+<li>插件主题什么的也少，好在需要的不多，该有的都有</li>
+</ul>
+
+
+<p>突然想起来Maslow的那几个需求，其实程序员还有一种装13的需求，又好用又能装13的东西，谁不喜欢呢。</p>
+
+<hr />
+
+<h2>Next</h2>
+
+<p>接下来还会不会再折腾呢，这是说不准的，生命在于无止境地折腾与运动&#8230;</p>
+]]></content>
+  </entry>
+  
+</feed>

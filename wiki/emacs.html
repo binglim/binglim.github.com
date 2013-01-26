@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Notes of Emacs</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="title" content="Notes of Emacs"/>
+<meta name="generator" content="Bluefish 2.2.3" />
+<meta name="generated" content="2013-01-13T21:26+0800"/>
+<meta name="author" content="Unknown" />
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+#table-of-contents {
+    font-size: 9pt;
+    position: fixed;
+    right: 0em;
+    top: 4em;
+    background: white;
+    -webkit-box-shadow: 0 0 1em #777777;
+    -moz-box-shadow: 0 0 1em #777777;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    text-align: center;
+    /* ensure doesn't flow off the screen when expanded */
+    max-height: 80%;
+    overflow: auto;
+    z-index: 200;
+}
+
+#table-of-contents h2 {
+    font-size: 9pt;
+    color: black;
+    max-width: 8em;
+    font-weight: normal;
+    padding-left: 0.5em;
+    padding-top: 0.05em;
+    padding-bottom: 0.05em;
+}
+
+#table-of-contents ul {
+    margin-left: 14pt;
+    margin-bottom: 10pt;
+    padding: 0
+}
+
+#table-of-contents li {
+    padding: 0;
+    margin: 1px;
+    list-style: none;
+}
+
+#table-of-contents ul>:first-child {
+    color: blue;
+}
+
+#table-of-contents #text-table-of-contents {
+    display: none;
+    text-align: left;
+}
+
+#table-of-contents:hover #text-table-of-contents {
+    display: block;
+    padding: 0.5em;
+    margin-top: -1.5em;
+}
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012  Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">Notes of Emacs</h1>
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 Entering and Exiting Emacs</a></li>
+<li><a href="#sec-2">2 Basic Editing Commands</a>
+<ul>
+<li><a href="#sec-2-1">2.1 Inserting Text</a></li>
+<li><a href="#sec-2-2">2.2 Change the Location of Point</a></li>
+<li><a href="#sec-2-3">2.3 Erasing Text</a></li>
+<li><a href="#sec-2-4">2.4 Undoing Changes</a></li>
+<li><a href="#sec-2-5">2.5 Files</a></li>
+<li><a href="#sec-2-6">2.6 Blank Lines</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3 Searching and Replacement</a>
+<ul>
+<li><a href="#sec-3-1">3.1 Basics of Incremental Search</a></li>
+<li><a href="#sec-3-2">3.2 Regular Expression Search</a></li>
+<li><a href="#sec-3-3">3.3 Replacement Commands</a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4 The Mark and the Region</a>
+<ul>
+<li><a href="#sec-4-1">4.1 Setting the Mark</a></li>
+<li><a href="#sec-4-2">4.2 Commands to Mark Textual Objects</a></li>
+<li><a href="#sec-4-3">4.3 Operating on the Region</a></li>
+</ul>
+</li>
+<li><a href="#sec-5">5 File Handling</a>
+<ul>
+<li><a href="#sec-5-1">5.1 Visiting Files</a></li>
+<li><a href="#sec-5-2">5.2 Saving Files</a></li>
+</ul>
+</li>
+<li><a href="#sec-6">6 Using Multiple Buffers</a>
+<ul>
+<li><a href="#sec-6-1">6.1 Creating and Selecting Buffers</a></li>
+<li><a href="#sec-6-2">6.2 Listing Existing Buffers</a></li>
+<li><a href="#sec-6-3">6.3 Miscellaneous Buffer Operations</a></li>
+<li><a href="#sec-6-4">6.4 Killing Buffers</a></li>
+</ul>
+</li>
+<li><a href="#sec-7">7 Multiple Windows</a>
+<ul>
+<li><a href="#sec-7-1">7.1 Splitting Windows</a></li>
+<li><a href="#sec-7-2">7.2 Using Other Windows</a></li>
+<li><a href="#sec-7-3">7.3 Displaying in Another Window</a></li>
+<li><a href="#sec-7-4">7.4 Deleting and Rearranging Windows</a></li>
+</ul>
+</li>
+<li><a href="#sec-8">8 References</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Entering and Exiting Emacs</h2>
+<div class="outline-text-2" id="text-1">
+
+<ul>
+<li>Entering: The usual way to invoke Emacs is with the shell command emacs.
+</li>
+<li>Exiting: C-x C-c Kill Emacs
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Basic Editing Commands</h2>
+<div class="outline-text-2" id="text-2">
+
+
+</div>
+
+<div id="outline-container-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> Inserting Text</h3>
+<div class="outline-text-3" id="text-2-1">
+
+<p>To insert a non-graphic character, or a character that your keyboard does not
+support, first quote it by typing C-q (quoted-insert).
+</p>
+<ul>
+<li>C-q followed by any non-graphic character (even C-g) inserts that character.
+
+<p>
+ e.g. C-q DEL inserts a literal 'DEL' character.
+</p>
+</li>
+<li>C-q followed by a sequence of octal digits inserts the character with the specified octal character code.
+
+<p>
+ e.g. C-q 1 0 1 B inserts ‘AB’.
+</p></li>
+<li>C-x 8 RET prompts for the Unicode name or code-point of a character, using the minibuffer.
+
+<p>
+ e.g. C-x 8 RET infinity RET / C-x 8 RET 221e RET inserts the infinity sign.
+</p></li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> Change the Location of Point</h3>
+<div class="outline-text-3" id="text-2-2">
+
+<p>For left-to-right scripts:
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<tbody>
+<tr><td class="left">C-f / RIGHT</td><td class="left">Move forward</td></tr>
+<tr><td class="left">C-b / LEFT</td><td class="left">Move backward</td></tr>
+<tr><td class="left">C-n / DOWN</td><td class="left">Move down one screen line</td></tr>
+<tr><td class="left">C-p / UP</td><td class="left">Move up one screen line</td></tr>
+<tr><td class="left">C-a / HOME</td><td class="left">Move to the beginning of the line</td></tr>
+<tr><td class="left">C-e / END</td><td class="left">Move to the end of the line</td></tr>
+<tr><td class="left">M-b / C-LEFT / C-RIGHT</td><td class="left">Move backward one word</td></tr>
+<tr><td class="left">M-f / C-RIGHT / M-RIGHT</td><td class="left">Move forward one word</td></tr>
+<tr><td class="left">M-r</td><td class="left">reposition point on the left margin of the center-most text line of the window</td></tr>
+<tr><td class="left">M-&lt;</td><td class="left">Move to the top of the buffer</td></tr>
+<tr><td class="left">M-&gt;</td><td class="left">Move to the end of the buffer</td></tr>
+<tr><td class="left">C-v PAGEDOWN NEXT</td><td class="left">Scroll the display one screen forward</td></tr>
+<tr><td class="left">M-v PAGEUP PRIOR</td><td class="left">Scroll one screen backward</td></tr>
+<tr><td class="left">M-x goto-char</td><td class="left">Read a number n and move point to buffer position n</td></tr>
+<tr><td class="left">M-g M-g / M-g</td><td class="left">Read a number n and move point to the beginning of line number n</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div id="outline-container-2-3" class="outline-3">
+<h3 id="sec-2-3"><span class="section-number-3">2.3</span> Erasing Text</h3>
+<div class="outline-text-3" id="text-2-3">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<tbody>
+<tr><td class="left">DEL / BACKSPACE</td><td class="left">Delete the character before point</td></tr>
+<tr><td class="left">DELETE</td><td class="left">Delete the character after point</td></tr>
+<tr><td class="left">C-d</td><td class="left">Delete the character after point</td></tr>
+<tr><td class="left">C-k</td><td class="left">Kill to the end of the line</td></tr>
+<tr><td class="left">M-d</td><td class="left">Kill forward to the end of the next</td></tr>
+<tr><td class="left">M-DEL</td><td class="left">Kill back to the beginning of the previous word</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div id="outline-container-2-4" class="outline-3">
+<h3 id="sec-2-4"><span class="section-number-3">2.4</span> Undoing Changes</h3>
+<div class="outline-text-3" id="text-2-4">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<tbody>
+<tr><td class="left">C-/ / C-x u / C-_</td><td class="left">Undo</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div id="outline-container-2-5" class="outline-3">
+<h3 id="sec-2-5"><span class="section-number-3">2.5</span> Files</h3>
+<div class="outline-text-3" id="text-2-5">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<tbody>
+<tr><td class="left">C-x C-f</td><td class="left">Open or create a file</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div id="outline-container-2-6" class="outline-3">
+<h3 id="sec-2-6"><span class="section-number-3">2.6</span> Blank Lines</h3>
+<div class="outline-text-3" id="text-2-6">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<tbody>
+<tr><td class="left">C-o</td><td class="left">Insert a blank line after the cursor</td></tr>
+<tr><td class="left">C-x C-o</td><td class="left">Delete all but one of many consecutive blank lines</td></tr>
+</tbody>
+</table>
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Searching and Replacement</h2>
+<div class="outline-text-2" id="text-3">
+
+
+</div>
+
+<div id="outline-container-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> Basics of Incremental Search</h3>
+<div class="outline-text-3" id="text-3-1">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<tbody>
+<tr><td class="left">C-s</td><td class="left">Begin incremental search</td></tr>
+<tr><td class="left">C-r</td><td class="left">Begin reverse incremental search</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div id="outline-container-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> Regular Expression Search</h3>
+<div class="outline-text-3" id="text-3-2">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<tbody>
+<tr><td class="left">C-M-s</td><td class="left">Begin incremental regexp search</td></tr>
+<tr><td class="left">C-M-r</td><td class="left">Begin reverse incremental regexp search</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div id="outline-container-3-3" class="outline-3">
+<h3 id="sec-3-3"><span class="section-number-3">3.3</span> Replacement Commands</h3>
+<div class="outline-text-3" id="text-3-3">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<tbody>
+<tr><td class="left">M-% string RET newstring RET</td><td class="left">Replace some occurrences of string with newstring</td></tr>
+<tr><td class="left">C-M-% regexp RET newstring RET</td><td class="left">Replace some matches for regexp with newstring</td></tr>
+</tbody>
+</table>
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> The Mark and the Region</h2>
+<div class="outline-text-2" id="text-4">
+
+
+</div>
+
+<div id="outline-container-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> Setting the Mark</h3>
+<div class="outline-text-3" id="text-4-1">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<tbody>
+<tr><td class="left">C-SPC / C-@</td><td class="left">Set the mark at point</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div id="outline-container-4-2" class="outline-3">
+<h3 id="sec-4-2"><span class="section-number-3">4.2</span> Commands to Mark Textual Objects</h3>
+<div class="outline-text-3" id="text-4-2">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<tbody>
+<tr><td class="left">M-@</td><td class="left">Set mark after end of next word</td></tr>
+<tr><td class="left">C-M-@</td><td class="left">Set mark after end of following balanced expression</td></tr>
+<tr><td class="left">M-h</td><td class="left">Move point to the beginning of the current paragraph, and set mark at the end</td></tr>
+<tr><td class="left">C-M-h</td><td class="left">Move point to the beginning of the current defun, and set mark at the end</td></tr>
+<tr><td class="left">C-x C-p</td><td class="left">Move point to the beginning of the current page, and set mark at the end</td></tr>
+<tr><td class="left">C-x h</td><td class="left">Move point to the beginning of the buffer, and set mark at the end</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div id="outline-container-4-3" class="outline-3">
+<h3 id="sec-4-3"><span class="section-number-3">4.3</span> Operating on the Region</h3>
+<div class="outline-text-3" id="text-4-3">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<tbody>
+<tr><td class="left">C-w</td><td class="left">Cut</td></tr>
+<tr><td class="left">M-w</td><td class="left">Copy</td></tr>
+<tr><td class="left">C-y</td><td class="left">Paste</td></tr>
+<tr><td class="left">M-y</td><td class="left">Replace the text just yanked with an earlier batch of killed text</td></tr>
+</tbody>
+</table>
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> File Handling</h2>
+<div class="outline-text-2" id="text-5">
+
+
+</div>
+
+<div id="outline-container-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> Visiting Files</h3>
+<div class="outline-text-3" id="text-5-1">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<tbody>
+<tr><td class="left">C-x C-f</td><td class="left">Visit a file</td></tr>
+<tr><td class="left">C-x C-r</td><td class="left">Visit a file for viewing, without allowing changes to it</td></tr>
+<tr><td class="left">C-x C-v</td><td class="left">Visit a different file instead of the one visited last</td></tr>
+<tr><td class="left">C-x 4 f</td><td class="left">Visit a file, in another window</td></tr>
+<tr><td class="left">C-x 5 f</td><td class="left">Visit a file, in a new frame</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div id="outline-container-5-2" class="outline-3">
+<h3 id="sec-5-2"><span class="section-number-3">5.2</span> Saving Files</h3>
+<div class="outline-text-3" id="text-5-2">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<tbody>
+<tr><td class="left">C-x C-s</td><td class="left">Save the current buffer to its file</td></tr>
+<tr><td class="left">C-x s</td><td class="left">Save any or all buffers to their files</td></tr>
+<tr><td class="left">M-~</td><td class="left">Forget that the current buffer has been changed</td></tr>
+<tr><td class="left">C-x C-w</td><td class="left">Save the current buffer with a specified file name</td></tr>
+<tr><td class="left">M-x set-visited-file-name</td><td class="left">Change the file name under which the current buffer will be saved</td></tr>
+</tbody>
+</table>
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Using Multiple Buffers</h2>
+<div class="outline-text-2" id="text-6">
+
+
+</div>
+
+<div id="outline-container-6-1" class="outline-3">
+<h3 id="sec-6-1"><span class="section-number-3">6.1</span> Creating and Selecting Buffers</h3>
+<div class="outline-text-3" id="text-6-1">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<tbody>
+<tr><td class="left">C-x b buffer RET</td><td class="left">Select or create a buffer named buffer</td></tr>
+<tr><td class="left">C-x 4 b buffer RET</td><td class="left">Select buffer in another window</td></tr>
+<tr><td class="left">C-x 5 b buffer RET</td><td class="left">Select buffer in a separate frame</td></tr>
+<tr><td class="left">C-x LEFT</td><td class="left">Select the previous buffer in the buffer list</td></tr>
+<tr><td class="left">C-x RIGHT</td><td class="left">Select the next buffer in the buffer list</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div id="outline-container-6-2" class="outline-3">
+<h3 id="sec-6-2"><span class="section-number-3">6.2</span> Listing Existing Buffers</h3>
+<div class="outline-text-3" id="text-6-2">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<tbody>
+<tr><td class="left">C-x C-b</td><td class="left">List the existing buffers</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div id="outline-container-6-3" class="outline-3">
+<h3 id="sec-6-3"><span class="section-number-3">6.3</span> Miscellaneous Buffer Operations</h3>
+<div class="outline-text-3" id="text-6-3">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<tbody>
+<tr><td class="left">C-x C-q</td><td class="left">Toggle read-only status of buffer</td></tr>
+<tr><td class="left">M-x rename-buffer RET name RET</td><td class="left">Change the name of the current buffer</td></tr>
+<tr><td class="left">M-x rename-uniquely</td><td class="left">Rename the current buffer by adding ‘&lt;number &gt;’ to the end</td></tr>
+<tr><td class="left">M-x view-buffer RET buffer RET</td><td class="left">Scroll through buffer buffer</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div id="outline-container-6-4" class="outline-3">
+<h3 id="sec-6-4"><span class="section-number-3">6.4</span> Killing Buffers</h3>
+<div class="outline-text-3" id="text-6-4">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<tbody>
+<tr><td class="left">C-x k bufname RET</td><td class="left">Kill buffer bufname</td></tr>
+<tr><td class="left">M-x kill-some-buffers</td><td class="left">Offer to kill each buffer, one by one</td></tr>
+<tr><td class="left">M-x kill-matching-buffers</td><td class="left">Offer to kill all buffers matching a regular expression</td></tr>
+</tbody>
+</table>
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> Multiple Windows</h2>
+<div class="outline-text-2" id="text-7">
+
+
+</div>
+
+<div id="outline-container-7-1" class="outline-3">
+<h3 id="sec-7-1"><span class="section-number-3">7.1</span> Splitting Windows</h3>
+<div class="outline-text-3" id="text-7-1">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<tbody>
+<tr><td class="left">C-x 2</td><td class="left">Split the selected window into two windows, one above the other</td></tr>
+<tr><td class="left">C-x 3</td><td class="left">Split the selected window into two windows, positioned side by side</td></tr>
+<tr><td class="left">C-Mouse-2</td><td class="left">In the mode line of a window, split that window</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div id="outline-container-7-2" class="outline-3">
+<h3 id="sec-7-2"><span class="section-number-3">7.2</span> Using Other Windows</h3>
+<div class="outline-text-3" id="text-7-2">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<tbody>
+<tr><td class="left">C-x o</td><td class="left">Select another window</td></tr>
+<tr><td class="left">C-M-v</td><td class="left">Scroll the next window</td></tr>
+<tr><td class="left">Mouse-1</td><td class="left">Select the window</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div id="outline-container-7-3" class="outline-3">
+<h3 id="sec-7-3"><span class="section-number-3">7.3</span> Displaying in Another Window</h3>
+<div class="outline-text-3" id="text-7-3">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<tbody>
+<tr><td class="left">C-x 4 b bufname RET</td><td class="left">Select buffer bufname in another window</td></tr>
+<tr><td class="left">C-x 4 C-o bufname RET</td><td class="left">Display buffer bufname in some window, without trying to select it</td></tr>
+<tr><td class="left">C-x 4 f filename RET</td><td class="left">Visit file filename and select its buffer in another window</td></tr>
+<tr><td class="left">C-x 4 d directory RET</td><td class="left">Select a Dired buffer for directory directory in another window</td></tr>
+<tr><td class="left">C-x 4 m</td><td class="left">Start composing a mail message</td></tr>
+<tr><td class="left">C-x 4 .</td><td class="left">Find a tag in the current tags table, similar to M-.</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div id="outline-container-7-4" class="outline-3">
+<h3 id="sec-7-4"><span class="section-number-3">7.4</span> Deleting and Rearranging Windows</h3>
+<div class="outline-text-3" id="text-7-4">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<tbody>
+<tr><td class="left">C-x 0</td><td class="left">Delete the selected window</td></tr>
+<tr><td class="left">C-x 1</td><td class="left">Delete all windows in the selected frame except the selected window</td></tr>
+<tr><td class="left">C-x 4 0</td><td class="left">Delete the selected window and kill the buffer that was showing in it</td></tr>
+<tr><td class="left">C-x ^</td><td class="left">Make selected window taller</td></tr>
+<tr><td class="left">C-x }</td><td class="left">Make selected window wider</td></tr>
+<tr><td class="left">C-x {}</td><td class="left">Make selected window narrower</td></tr>
+<tr><td class="left">C-x -</td><td class="left">Shrink this window if its buffer doesn’t need so many lines</td></tr>
+<tr><td class="left">C-x +</td><td class="left">Make all windows the same height</td></tr>
+</tbody>
+</table>
+
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> References</h2>
+<div class="outline-text-2" id="text-8">
+
+<p>《GNU Emacs Manual》
+</p></div>
+</div>
+</div>
+
+<div id="postamble">
+<p class="date">Date: 2013-01-13T21:26+0800</p>
+<p class="author">Author: Bing Lim  &lt;linbin1218@gmail.com&gt;</p>
+<p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.2 with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>
