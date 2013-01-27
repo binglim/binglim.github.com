@@ -1,0 +1,73 @@
+@media all{
+	body{
+		background-image: url(/wiki/rbg.png);
+		font-family: Verdana;  
+		font-size: 10pt;
+		padding-top: 10pt;
+		padding-left: 30pt;
+		padding-right: 30pt;
+		padding-bottom: 10pt;
+		}
+
+	 #table-of-contents {  
+    color: black;  
+    background: #EBEBE0;  
+    font-size: 80%;  
+    padding: .5em;  
+    margin: 0em 0em 1em 1em;  
+    position: fixed;
+    right: 0em;
+    top: 0em;
+    -webkit-box-shadow: 0 0 1em #777777;
+    -moz-box-shadow: 0 0 1em #777777;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    display: block;  
+  }  
+  
+  #table-of-contents a  {  
+    color: black;
+  }  
+  
+  #table-of-contents a:hover {  
+    color: #003333;  
+    text-decoration: underline;  
+  }  
+  
+  #table-of-contents li  {  
+    margin: .2em;  
+  }  
+  
+  #table-of-contents h2 {  
+    margin-top: .2em;  
+    border: none;  
+  } 
+  
+  h1 {  
+    font-size: 14pt;  
+  }  
+  
+  .title {  
+    color: brown;  
+    padding-bottom: 7px;  
+    margin-bottom: 20px;  
+    border-bottom: 1px solid #222;  
+  }  
+  
+  h2 {  
+    color: chocolate;
+    font-size: 12pt;  
+    padding-bottom: 4px;  
+    margin-bottom: 5px;  
+    border-bottom: 3px solid #DDD;  
+  }  
+  
+  h3 {  
+    font-size: 11pt;  
+    color:  darkgoldenrod;  
+  }  
+  
+  h4 {  
+    font-size: 9pt;  
+  }   
+}
