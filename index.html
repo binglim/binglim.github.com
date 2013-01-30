@@ -9,7 +9,8 @@
   <meta name="author" content="Bing">
 
   
-  <meta name="description" content="当初小手一抖，装的是32位的archlinux，但只能识别出笔记本4G内存上的3G，又不想重装系统，只能自己编译内核的pae版本。 yaourt linux-pae 编译的时候出现No space left on device的错误，这时把/etc/yaourtrc文件中的TMPDIR改掉就可以了 &hellip;">
+  <meta name="description" content="做个记录，以备不时之需…… cdrkit 刻录工具 设置权限： gpasswd -a &lt;username&gt; optical 常用命令： wodim -v dev=/dev/cdrw isoimage.iso #刻录ISO
+dd if=/dev/cdrom of=/home/user/ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -67,6 +68,63 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/01/30/useful-tools-in-archlinux/">Useful Tools in Archlinux</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-30T18:47:00+08:00" pubdate data-updated="true">Jan 30<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>做个记录，以备不时之需……</p>
+
+<h4>cdrkit 刻录工具</h4>
+
+<p>设置权限：</p>
+
+<pre><code>gpasswd -a &lt;username&gt; optical
+</code></pre>
+
+<p>常用命令：</p>
+
+<pre><code>wodim -v dev=/dev/cdrw isoimage.iso #刻录ISO
+dd if=/dev/cdrom of=/home/user/isoimage.iso #从光盘生成ISO
+mkisofs -o isoimage.iso ~/folder #从硬盘上的文件生成一个iso镜像
+</code></pre>
+
+<h4>udevil 挂载工具，无需密码</h4>
+
+<p>常用命令：</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/01/30/useful-tools-in-archlinux/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -260,6 +318,10 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/01/30/useful-tools-in-archlinux/">Useful tools in archlinux</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2013/01/30/let-archlinux-see-4gb-of-memory/">让32位archlinux识别4G内存</a>

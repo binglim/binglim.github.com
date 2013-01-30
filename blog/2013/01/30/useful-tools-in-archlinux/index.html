@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>每一条龙，都有自己的湾 - Bing's Blog</title>
+  <title>Useful tools in archlinux - Bing's Blog</title>
   <meta name="author" content="Bing">
 
   
-  <meta name="description" content="“每一条龙，都有自己的湾。”这是万科一楼盘的广告语。龙湾本是一小村庄，不知为何变成了区名，吞噬了永强。然而，在这片土地上成长起来的人们，显然对“永强”这两个字更有归属感。十几年前，部分身份证以330304打头的人突然从瓯海人变成了龙湾人，从此瓯海无海，延续了几十年的行政地理割裂开来。 &hellip;">
+  <meta name="description" content="做个记录，以备不时之需…… cdrkit 刻录工具 设置权限： gpasswd -a &lt;username&gt; optical 常用命令： wodim -v dev=/dev/cdrw isoimage.iso #刻录ISO
+dd if=/dev/cdrom of=/home/user/ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://binglim.github.com/blog/2013/01/26/trace-of-wenzhou-longwan/">
+  <link rel="canonical" href="http://binglim.github.com/blog/2013/01/30/useful-tools-in-archlinux/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -70,7 +71,7 @@
   
   <header>
     
-      <h1 class="entry-title">每一条龙，都有自己的湾</h1>
+      <h1 class="entry-title">Useful Tools in Archlinux</h1>
     
     
       <p class="meta">
@@ -86,46 +87,97 @@
   
 
 
-<time datetime="2013-01-26T20:00:00+08:00" pubdate data-updated="true">Jan 26<span>th</span>, 2013</time>
+<time datetime="2013-01-30T18:47:00+08:00" pubdate data-updated="true">Jan 30<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>“每一条龙，都有自己的湾。”这是万科一楼盘的广告语。龙湾本是一小村庄，不知为何变成了区名，吞噬了永强。然而，在这片土地上成长起来的人们，显然对“永强”这两个字更有归属感。十几年前，部分身份证以330304打头的人突然从瓯海人变成了龙湾人，从此瓯海无海，延续了几十年的行政地理割裂开来。</p>
+<div class="entry-content"><p>做个记录，以备不时之需……</p>
 
-<!-- more -->
+<h4>cdrkit 刻录工具</h4>
+
+<p>设置权限：</p>
+
+<pre><code>gpasswd -a &lt;username&gt; optical
+</code></pre>
+
+<p>常用命令：</p>
+
+<pre><code>wodim -v dev=/dev/cdrw isoimage.iso #刻录ISO
+dd if=/dev/cdrom of=/home/user/isoimage.iso #从光盘生成ISO
+mkisofs -o isoimage.iso ~/folder #从硬盘上的文件生成一个iso镜像
+</code></pre>
+
+<h4>udevil 挂载工具，无需密码</h4>
+
+<p>常用命令：<!--more--></p>
+
+<pre><code>udevil mount /dev/sdd1 #挂载
+udevil umount /dev/sdd1 #卸载
+devmon #自动挂载
+devmon -a #全部挂载
+devmon -u #全部卸载
+</code></pre>
+
+<h4>chromium 不解释</h4>
+
+<h4>alsa-utils 声音控制</h4>
+
+<p>含有alsamixier用户空间工具，在终端中配置声卡。安装alsa-oss如果需要OSS应用程序与软件混音协同工作。</p>
+
+<h4>synaptics 触摸板</h4>
+
+<h4>cpupower CPU频率控制</h4>
+
+<pre><code>cpupower frequency-info #获取CPU信息
+</code></pre>
+
+<h4>抄袭<a href="http://huanghuachao.cn">Richad Huang</a></h4>
+
+<ul>
+<li>ranger 文件管理</li>
+<li>mpd ncmpcpp 音乐播放</li>
+<li>htop 进程监管</li>
+<li>wicd 网络控制</li>
+<li>xmond + slim 窗口管理+登录管理</li>
+</ul>
 
 
-<p>整个永强像是一个工业区，可以抱怨的似乎太多：无数的工厂，逼仄的街道，高企的物价，混乱的交通。尽管远离市中心，却失去了成为世外桃源的一切条件。然而它终究在变好，城市化是当今社会不可逆转的过程。无论将来身在何处，总还是希望家乡能够有所发展。城市向东，奥体、轨道交通等工程已经描绘出了一幅蓝图，有人说，几年后，这里会变成城市。</p>
+<h4>各种作图</h4>
 
-<p>每次回家，都会想出去逛一圈，它的变化十分迅速，倘若我离家几年，回来应该会有一种陌生的感觉吧。一直觉得，永强的商业是与其经济极不对称的，即便宝马奔驰满街，本地也没有一个像样的商场，以至于万达刚开业人气如此火爆。好歹终于有个能逛的地方了。</p>
-
-<iframe src="https://skydrive.live.com/embed?cid=690DC627810F3B99&resid=690DC627810F3B99%21153&authkey=AJjRw3-KYELKGic" height="240" frameborder="0" scrolling="no"></iframe>
-
-
-<p>万达的速度确实给人一种大跃进的快感，从拿地到开业只花了20个月，让人很期待二期。</p>
-
-<iframe src="https://skydrive.live.com/embed?cid=690DC627810F3B99&resid=690DC627810F3B99%21117&authkey=AJibdph--vY0UT0" height="240" frameborder="0" scrolling="no"></iframe>
+<ul>
+<li>gimp linux中的photoshop</li>
+<li>dia 作各种图，但觉得不好看</li>
+<li>xmind 思维导图</li>
+<li>astah-community UML</li>
+</ul>
 
 
-<p>现在的永强，是一个大工地，到处都是脚手架和吊车，每次回来，都能看见很多新楼。</p>
+<p> <strong>几个不错的在线作图网站</strong></p>
 
-<iframe src="https://skydrive.live.com/embed?cid=690DC627810F3B99&resid=690DC627810F3B99%21123&authkey=ACNYUMFHkg3v9_E" height="240" frameborder="0" scrolling="no"></iframe>
-
-
-<p>然而有时候又不得不吐槽一下开发商的审美。</p>
-
-<iframe src="https://skydrive.live.com/embed?cid=690DC627810F3B99&resid=690DC627810F3B99%21138&authkey=AJ6tgIJWftwjQjQ" height="240" frameborder="0" scrolling="no"></iframe>
-
-
-<p></p>
-
-<iframe src="https://skydrive.live.com/embed?cid=690DC627810F3B99&resid=690DC627810F3B99%21125&authkey=AHcIMpOLTpIYevw" height="240" frameborder="0" scrolling="no"></iframe>
+<ul>
+<li><a href="https://cacoo.com/diagrams/">cacoo</a></li>
+<li><a href="https://gomockingbird.com/mockingbird/">mockingbird</a></li>
+<li><a href="http://lumzy.com/app/">lumzy</a></li>
+<li><a href="http://www.gliffy.com/gliffy/">gliffy</a></li>
+<li><a href="http://www.toondoo.com/createToon.do">toondoo</a> 这个是弄漫画的</li>
+</ul>
 
 
-<p>明年近日，会看到什么样的永强？</p>
+<h4>dmenu 快速启动</h4>
+
+<pre><code>dmenu_run #运行
+</code></pre>
+
+<h4>libreoffice 不解释</h4>
+
+<h4>fcitx 不解释</h4>
+
+<h4>emacs + auctex 不解释</h4>
+
+<h4>还有。。。</h4>
 </div>
 
 
@@ -148,12 +200,12 @@
   
 
 
-<time datetime="2013-01-26T20:00:00+08:00" pubdate data-updated="true">Jan 26<span>th</span>, 2013</time>
+<time datetime="2013-01-30T18:47:00+08:00" pubdate data-updated="true">Jan 30<span>th</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/trace-of-wenzhou/'>Trace-of-Wenzhou</a>
+    <a class='category' href='/blog/categories/notes/'>Notes</a>
   
 </span>
 
@@ -169,10 +221,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/01/23/notes-of-installing-archlinux/" title="Previous Post: Notes of Archlinux">&laquo; Notes of Archlinux</a>
+        <a class="basic-alignment left" href="/blog/2013/01/30/let-archlinux-see-4gb-of-memory/" title="Previous Post: 让32位archlinux识别4G内存">&laquo; 让32位archlinux识别4G内存</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2013/01/30/let-archlinux-see-4gb-of-memory/" title="Next Post: 让32位archlinux识别4G内存">让32位archlinux识别4G内存 &raquo;</a>
       
     </p>
   </footer>
@@ -268,8 +318,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://binglim.github.com/blog/2013/01/26/trace-of-wenzhou-longwan/';
-        var disqus_url = 'http://binglim.github.com/blog/2013/01/26/trace-of-wenzhou-longwan/';
+        var disqus_identifier = 'http://binglim.github.com/blog/2013/01/30/useful-tools-in-archlinux/';
+        var disqus_url = 'http://binglim.github.com/blog/2013/01/30/useful-tools-in-archlinux/';
         var disqus_script = 'embed.js';
       
     (function () {

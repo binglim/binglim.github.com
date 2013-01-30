@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Notes | Bing's Blog]]></title>
   <link href="http://binglim.github.com/blog/categories/notes/atom.xml" rel="self"/>
   <link href="http://binglim.github.com/"/>
-  <updated>2013-01-30T17:28:12+08:00</updated>
+  <updated>2013-01-30T20:04:41+08:00</updated>
   <id>http://binglim.github.com/</id>
   <author>
     <name><![CDATA[Bing]]></name>
@@ -12,6 +12,98 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Useful tools in archlinux]]></title>
+    <link href="http://binglim.github.com/blog/2013/01/30/useful-tools-in-archlinux/"/>
+    <updated>2013-01-30T18:47:00+08:00</updated>
+    <id>http://binglim.github.com/blog/2013/01/30/useful-tools-in-archlinux</id>
+    <content type="html"><![CDATA[<p>做个记录，以备不时之需……</p>
+
+<h4>cdrkit 刻录工具</h4>
+
+<p>设置权限：</p>
+
+<pre><code>gpasswd -a &lt;username&gt; optical
+</code></pre>
+
+<p>常用命令：</p>
+
+<pre><code>wodim -v dev=/dev/cdrw isoimage.iso #刻录ISO
+dd if=/dev/cdrom of=/home/user/isoimage.iso #从光盘生成ISO
+mkisofs -o isoimage.iso ~/folder #从硬盘上的文件生成一个iso镜像
+</code></pre>
+
+<h4>udevil 挂载工具，无需密码</h4>
+
+<p>常用命令：<!--more--></p>
+
+<pre><code>udevil mount /dev/sdd1 #挂载
+udevil umount /dev/sdd1 #卸载
+devmon #自动挂载
+devmon -a #全部挂载
+devmon -u #全部卸载
+</code></pre>
+
+<h4>chromium 不解释</h4>
+
+<h4>alsa-utils 声音控制</h4>
+
+<p>含有alsamixier用户空间工具，在终端中配置声卡。安装alsa-oss如果需要OSS应用程序与软件混音协同工作。</p>
+
+<h4>synaptics 触摸板</h4>
+
+<h4>cpupower CPU频率控制</h4>
+
+<pre><code>cpupower frequency-info #获取CPU信息
+</code></pre>
+
+<h4>抄袭<a href="http://huanghuachao.cn">Richad Huang</a></h4>
+
+<ul>
+<li>ranger 文件管理</li>
+<li>mpd ncmpcpp 音乐播放</li>
+<li>htop 进程监管</li>
+<li>wicd 网络控制</li>
+<li>xmond + slim 窗口管理+登录管理</li>
+</ul>
+
+
+<h4>各种作图</h4>
+
+<ul>
+<li>gimp linux中的photoshop</li>
+<li>dia 作各种图，但觉得不好看</li>
+<li>xmind 思维导图</li>
+<li>astah-community UML</li>
+</ul>
+
+
+<p> <strong>几个不错的在线作图网站</strong></p>
+
+<ul>
+<li><a href="https://cacoo.com/diagrams/">cacoo</a></li>
+<li><a href="https://gomockingbird.com/mockingbird/">mockingbird</a></li>
+<li><a href="http://lumzy.com/app/">lumzy</a></li>
+<li><a href="http://www.gliffy.com/gliffy/">gliffy</a></li>
+<li><a href="http://www.toondoo.com/createToon.do">toondoo</a> 这个是弄漫画的</li>
+</ul>
+
+
+<h4>dmenu 快速启动</h4>
+
+<pre><code>dmenu_run #运行
+</code></pre>
+
+<h4>libreoffice 不解释</h4>
+
+<h4>fcitx 不解释</h4>
+
+<h4>emacs + auctex 不解释</h4>
+
+<h4>还有。。。</h4>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[让32位archlinux识别4G内存]]></title>
