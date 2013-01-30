@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Notes of Archlinux - Bing's Blog</title>
+  <title>让32位archlinux识别4G内存 - Bing's Blog</title>
   <meta name="author" content="Bing">
 
   
-  <meta name="description" content="回家之后日子过得舒坦了，也就开始了折腾。加上移动硬盘到手了，索性就把电脑里的东西清了个干净，装了一下archlinux，紧接着又跟着超哥的足迹，把他推荐的软件都装了个遍，虽然也不是很多。期间也试了不少东西，颇有收获。随便记录一下期间的一些内容，也许以后还会用到。 关于窗口管理器 &hellip;">
+  <meta name="description" content="当初小手一抖，装的是32位的archlinux，但只能识别出笔记本4G内存上的3G，又不想重装系统，只能自己编译内核的pae版本。 yaourt linux-pae 编译的时候出现No space left on device的错误，这时把/etc/yaourtrc文件中的TMPDIR改掉就可以了 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://binglim.github.com/blog/2013/01/23/notes-of-installing-archlinux/">
+  <link rel="canonical" href="http://binglim.github.com/blog/2013/01/30/let-archlinux-see-4gb-of-memory/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -70,7 +70,7 @@
   
   <header>
     
-      <h1 class="entry-title">Notes of Archlinux</h1>
+      <h1 class="entry-title">让32位archlinux识别4G内存</h1>
     
     
       <p class="meta">
@@ -86,39 +86,23 @@
   
 
 
-<time datetime="2013-01-23T20:00:00+08:00" pubdate data-updated="true">Jan 23<span>rd</span>, 2013</time>
+<time datetime="2013-01-30T16:41:00+08:00" pubdate data-updated="true">Jan 30<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>回家之后日子过得舒坦了，也就开始了折腾。加上移动硬盘到手了，索性就把电脑里的东西清了个干净，装了一下archlinux，紧接着又跟着超哥的足迹，把他推荐的软件都装了个遍，虽然也不是很多。期间也试了不少东西，颇有收获。随便记录一下期间的一些内容，也许以后还会用到。</p>
+<div class="entry-content"><p>当初小手一抖，装的是32位的archlinux，但只能识别出笔记本4G内存上的3G，又不想重装系统，只能自己编译内核的pae版本。</p>
 
-<hr />
-
-<h2>关于窗口管理器</h2>
-
-<p>刚开始装了个openbox的，也搞了各种配置，后来某位少年说跟windows没什么差的，遂装13心理发作，索性玩一下tiling window的，于是试了一下xmonad，stumpwm，awesome。刚开始是先装了xmonad的，<!-- more -->但看到xmonad的配置文件那一坨坨的语句感到很有压力，恰逢fcitx在终端运行的部分程序中无法使用中，按照wiki以及各种论坛中的配置与方法试了好久也不行，但在openbox下却没问题，于是就想换个WM看看行不行。于是下了个stumpwm。这东西一上来就给人一种很不顺手的感觉，没玩几下迅速删除。紧接着下了个awesome，其实awesome给人的感觉挺好的，但总感觉窗口的排布不如xmonad讨人喜欢，于是又换回xmonad，至于输入法，只要不是通过终端启动的程序都是能正常工作的，所以就给那些之前无法正常工具的程序都绑定了快捷键。xmonad的配置也只是按照官方给的example简单的改了一下，还未掌握haskell的要领。</p>
-
-<h2>安装虚拟机virtualbox</h2>
-
-<p>其实还有个.net相关的作业没有做，但windows已经删掉了，所以怒装了一个virtualbox，过程很简单，但wiki好像写了不少，反正也用不到，没仔细看。</p>
-
-<pre><code>pacman -S vitualbox
-gpasswd -a username vboxusers
-modprobe vboxdrv
+<pre><code>yaourt linux-pae
 </code></pre>
 
-<h2>声音独占</h2>
+<p>编译的时候出现No space left on device的错误，这时把/etc/yaourtrc文件中的TMPDIR改掉就可以了，因为yaourt默认实用/tmp文件夹进行编译，而linux下/tmp文件夹的大小又默认为内存的一半，因此把它改成TMPDIR=&#8221;/var/tmp&#8221;就可以了。</p>
 
-<p>其实从ubuntu换到archlinux还是遇到了不少问题的，本身就是一只小菜鸟，对linux毕竟还不是很熟悉，比如默认的系统不会自动加载oss模块，所以不同两个程序同时播放声音，加载一下snd_pcm_oss,snd_seq_oss,snd_pcm_oss模块就可以解决这个问题了。把要自动加载的模块写到一个.conf文件放到/etc/modules-load.d文件夹下就可以不用手动加载了。</p>
+<p>编译完成后，编辑一下/boot/grub/grub.cfg文件，找到引导项中的linux和initrd，将/vmlinuz-linux和/initramfs-linux分别改为/vmlinuz-linux-pae和/initramfs-linux-pae-fallback.img。</p>
 
-<h2>MATLAB等程序灰色的一片</h2>
-
-<p>如果你基本复制了官方的配置文件，那么把defaultConfig里的startupHook改成  startupHook = setWMName &#8220;LG3D&#8221;  就可以了。</p>
-
-<h2>还有很多，下次有空再写吧………</h2>
+<p>重启即可。</p>
 </div>
 
 
@@ -141,12 +125,12 @@ modprobe vboxdrv
   
 
 
-<time datetime="2013-01-23T20:00:00+08:00" pubdate data-updated="true">Jan 23<span>rd</span>, 2013</time>
+<time datetime="2013-01-30T16:41:00+08:00" pubdate data-updated="true">Jan 30<span>th</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/linux/'>linux</a>
+    <a class='category' href='/blog/categories/notes/'>Notes</a>
   
 </span>
 
@@ -162,10 +146,8 @@ modprobe vboxdrv
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/01/12/restart-again/" title="Previous Post: 折腾，是我们对应然之事的承诺">&laquo; 折腾，是我们对应然之事的承诺</a>
+        <a class="basic-alignment left" href="/blog/2013/01/26/trace-of-wenzhou-longwan/" title="Previous Post: 每一条龙，都有自己的湾">&laquo; 每一条龙，都有自己的湾</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2013/01/26/trace-of-wenzhou-longwan/" title="Next Post: 每一条龙，都有自己的湾">每一条龙，都有自己的湾 &raquo;</a>
       
     </p>
   </footer>
@@ -257,8 +239,8 @@ modprobe vboxdrv
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://binglim.github.com/blog/2013/01/23/notes-of-installing-archlinux/';
-        var disqus_url = 'http://binglim.github.com/blog/2013/01/23/notes-of-installing-archlinux/';
+        var disqus_identifier = 'http://binglim.github.com/blog/2013/01/30/let-archlinux-see-4gb-of-memory/';
+        var disqus_url = 'http://binglim.github.com/blog/2013/01/30/let-archlinux-see-4gb-of-memory/';
         var disqus_script = 'embed.js';
       
     (function () {

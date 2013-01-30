@@ -9,7 +9,7 @@
   <meta name="author" content="Bing">
 
   
-  <meta name="description" content="“每一条龙，都有自己的湾。”这是万科一楼盘的广告语。龙湾本是一小村庄，不知为何变成了区名，吞噬了永强。然而，在这片土地上成长起来的人们，显然对“永强”这两个字更有归属感。十几年前，部分身份证以330304打头的人突然从瓯海人变成了龙湾人，从此瓯海无海，延续了几十年的行政地理割裂开来。 ">
+  <meta name="description" content="当初小手一抖，装的是32位的archlinux，但只能识别出笔记本4G内存上的3G，又不想重装系统，只能自己编译内核的pae版本。 yaourt linux-pae 编译的时候出现No space left on device的错误，这时把/etc/yaourtrc文件中的TMPDIR改掉就可以了 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -67,6 +67,51 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/01/30/let-archlinux-see-4gb-of-memory/">让32位archlinux识别4G内存</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-30T16:41:00+08:00" pubdate data-updated="true">Jan 30<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>当初小手一抖，装的是32位的archlinux，但只能识别出笔记本4G内存上的3G，又不想重装系统，只能自己编译内核的pae版本。</p>
+
+<pre><code>yaourt linux-pae
+</code></pre>
+
+<p>编译的时候出现No space left on device的错误，这时把/etc/yaourtrc文件中的TMPDIR改掉就可以了，因为yaourt默认实用/tmp文件夹进行编译，而linux下/tmp文件夹的大小又默认为内存的一半，因此把它改成TMPDIR=&#8221;/var/tmp&#8221;就可以了。</p>
+
+<p>编译完成后，编辑一下/boot/grub/grub.cfg文件，找到引导项中的linux和initrd，将/vmlinuz-linux和/initramfs-linux分别改为/vmlinuz-linux-pae和/initramfs-linux-pae-fallback.img。</p>
+
+<p>重启即可。</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -215,6 +260,10 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/01/30/let-archlinux-see-4gb-of-memory/">让32位archlinux识别4G内存</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2013/01/26/trace-of-wenzhou-longwan/">每一条龙，都有自己的湾</a>

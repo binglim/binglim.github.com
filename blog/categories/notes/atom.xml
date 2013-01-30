@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Notes | Bing's Blog]]></title>
+  <link href="http://binglim.github.com/blog/categories/notes/atom.xml" rel="self"/>
+  <link href="http://binglim.github.com/"/>
+  <updated>2013-01-30T17:28:12+08:00</updated>
+  <id>http://binglim.github.com/</id>
+  <author>
+    <name><![CDATA[Bing]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[让32位archlinux识别4G内存]]></title>
+    <link href="http://binglim.github.com/blog/2013/01/30/let-archlinux-see-4gb-of-memory/"/>
+    <updated>2013-01-30T16:41:00+08:00</updated>
+    <id>http://binglim.github.com/blog/2013/01/30/let-archlinux-see-4gb-of-memory</id>
+    <content type="html"><![CDATA[<p>当初小手一抖，装的是32位的archlinux，但只能识别出笔记本4G内存上的3G，又不想重装系统，只能自己编译内核的pae版本。</p>
+
+<pre><code>yaourt linux-pae
+</code></pre>
+
+<p>编译的时候出现No space left on device的错误，这时把/etc/yaourtrc文件中的TMPDIR改掉就可以了，因为yaourt默认实用/tmp文件夹进行编译，而linux下/tmp文件夹的大小又默认为内存的一半，因此把它改成TMPDIR="/var/tmp"就可以了。</p>
+
+<p>编译完成后，编辑一下/boot/grub/grub.cfg文件，找到引导项中的linux和initrd，将/vmlinuz-linux和/initramfs-linux分别改为/vmlinuz-linux-pae和/initramfs-linux-pae-fallback.img。</p>
+
+<p>重启即可。</p>
+]]></content>
+  </entry>
+  
+</feed>
