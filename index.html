@@ -9,8 +9,8 @@
   <meta name="author" content="Bing">
 
   
-  <meta name="description" content="做个记录，以备不时之需…… cdrkit 刻录工具 设置权限： gpasswd -a &lt;username&gt; optical 常用命令： wodim -v dev=/dev/cdrw isoimage.iso #刻录ISO
-dd if=/dev/cdrom of=/home/user/ &hellip;">
+  <meta name="description" content="Text Indexing 基本文本索引
+当你在网络中搜索文档时，会出现最匹配你查询的关键字的结果。实现这个功能的技术叫做text indexing。 如果使用平衡二叉树，查找一个词需要O(log m)（hashing会更高效一点:O(1+m/K)），如果查询q个关键字，则还要耗费时间O(rq) &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -29,6 +29,37 @@ dd if=/dev/cdrom of=/home/user/ &hellip;">
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
   
 
@@ -74,6 +105,98 @@ dd if=/dev/cdrom of=/home/user/ &hellip;">
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2013/04/04/notes-of-web-intelligence-and-big-data-1-look/">Notes of Web Intelligence and Big Data - 1 Look</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-04T13:40:00+08:00" pubdate data-updated="true">Apr 4<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2 id="text-indexing-">Text Indexing 基本文本索引</h2>
+<p>当你在网络中搜索文档时，会出现最匹配你查询的关键字的结果。实现这个功能的技术叫做text indexing。</p>
+
+<p>如果使用平衡二叉树，查找一个词需要<em>O(log m)</em>（hashing会更高效一点:<em>O(1+m/K)</em>），如果查询q个关键字，则还要耗费时间<em>O(rq)</em>在整合查询各个关键字的结果上，其中，r是所有中间结果。如果r非常大，就会很耗时。
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/04/04/notes-of-web-intelligence-and-big-data-1-look/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/04/04/notes-of-web-intelligence-and-big-data/">Notes of Web Intelligence and Big Data - 0 Introduction</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-04T12:10:00+08:00" pubdate data-updated="true">Apr 4<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h2 id="web-intelligence-and-big-data-on-coursera">Web Intelligence and Big Data on Coursera</h2>
+<p>Coursera上的 <em>Web Intelligence and Big Data</em> 开始了，据传说这是一个广度胜于深度的课程，覆盖到了许多话题，对于并非专攻这个领域的人来说，应该是一个很好的知识普及材料。课程是来自印度理工学院（IIT）的，老师也是明显的印度腔，但还不至于听不懂。说话的速度很慢，1.5倍速比较合适。这门课应该起不到练听力的效果了T_T。</p>
+
+<p>这门课程的推荐教材有：</p>
+
+<p><em>Mining Massive Datasets</em> by J.D. Ullman and A. Rajaraman (Cambridge University Press, UK 2012)</p>
+
+<p><em>Introduction to Information Retrieval</em> by Christopher Manning, Prabhakar Raghavan and Hinrich Schutze (Cambridge University Press, UK 2008)</p>
+
+<p><em>Enterprise Cloud Computing</em> by Gautam Shroff (Cambridge University Press, UK 2010)
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/04/04/notes-of-web-intelligence-and-big-data/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2013/01/30/useful-tools-in-archlinux/">Useful Tools in Archlinux</a></h1>
     
     
@@ -99,8 +222,7 @@ dd if=/dev/cdrom of=/home/user/ &hellip;">
 
   <div class="entry-content"><p>做个记录，以备不时之需……</p>
 
-<h4>cdrkit 刻录工具</h4>
-
+<h4 id="cdrkit-">cdrkit 刻录工具</h4>
 <p>设置权限：</p>
 
 <pre><code>gpasswd -a &lt;username&gt; optical
@@ -113,8 +235,7 @@ dd if=/dev/cdrom of=/home/user/isoimage.iso #从光盘生成ISO
 mkisofs -o isoimage.iso ~/folder #从硬盘上的文件生成一个iso镜像
 </code></pre>
 
-<h4>udevil 挂载工具，无需密码</h4>
-
+<h4 id="udevil-">udevil 挂载工具，无需密码</h4>
 <p>常用命令：</div>
   
   
@@ -154,12 +275,9 @@ mkisofs -o isoimage.iso ~/folder #从硬盘上的文件生成一个iso镜像
   </header>
 
 
-  <div class="entry-content"><p>当初小手一抖，装的是32位的archlinux，但只能识别出笔记本4G内存上的3G，又不想重装系统，只能自己编译内核的pae版本。</p>
-
-<pre><code>yaourt linux-pae
-</code></pre>
-
-<p>编译的时候出现No space left on device的错误，这时把/etc/yaourtrc文件中的TMPDIR改掉就可以了，因为yaourt默认实用/tmp文件夹进行编译，而linux下/tmp文件夹的大小又默认为内存的一半，因此把它改成TMPDIR=&#8221;/var/tmp&#8221;就可以了。</p>
+  <div class="entry-content"><p>当初小手一抖，装的是32位的archlinux，但只能识别出笔记本4G内存上的3G，又不想重装系统，只能自己编译内核的pae版本。
+    yaourt linux-pae
+编译的时候出现No space left on device的错误，这时把/etc/yaourtrc文件中的TMPDIR改掉就可以了，因为yaourt默认实用/tmp文件夹进行编译，而linux下/tmp文件夹的大小又默认为内存的一半，因此把它改成TMPDIR=”/var/tmp”就可以了。</p>
 
 <p>编译完成后，编辑一下/boot/grub/grub.cfg文件，找到引导项中的linux和initrd，将/vmlinuz-linux和/initramfs-linux分别改为/vmlinuz-linux-pae和/initramfs-linux-pae-fallback.img。</p>
 
@@ -199,8 +317,7 @@ mkisofs -o isoimage.iso ~/folder #从硬盘上的文件生成一个iso镜像
   </header>
 
 
-  <div class="entry-content"><p>“每一条龙，都有自己的湾。”这是万科一楼盘的广告语。龙湾本是一小村庄，不知为何变成了区名，吞噬了永强。然而，在这片土地上成长起来的人们，显然对“永强”这两个字更有归属感。十几年前，部分身份证以330304打头的人突然从瓯海人变成了龙湾人，从此瓯海无海，延续了几十年的行政地理割裂开来。</p>
-
+  <div class="entry-content"><p>“每一条龙，都有自己的湾。”这是万科一楼盘的广告语。龙湾本是一小村庄，不知为何变成了区名，吞噬了永强。然而，在这片土地上成长起来的人们，显然对“永强”这两个字更有归属感。十几年前，部分身份证以330304打头的人突然从瓯海人变成了龙湾人，从此瓯海无海，延续了几十年的行政地理割裂开来。
 </div>
   
   
@@ -212,102 +329,9 @@ mkisofs -o isoimage.iso ~/folder #从硬盘上的文件生成一个iso镜像
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/01/23/notes-of-installing-archlinux/">Notes of Archlinux</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-23T20:00:00+08:00" pubdate data-updated="true">Jan 23<span>rd</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>回家之后日子过得舒坦了，也就开始了折腾。加上移动硬盘到手了，索性就把电脑里的东西清了个干净，装了一下archlinux，紧接着又跟着超哥的足迹，把他推荐的软件都装了个遍，虽然也不是很多。期间也试了不少东西，颇有收获。随便记录一下期间的一些内容，也许以后还会用到。</p>
-
-<hr />
-
-<h2>关于窗口管理器</h2>
-
-<p>刚开始装了个openbox的，也搞了各种配置，后来某位少年说跟windows没什么差的，遂装13心理发作，索性玩一下tiling window的，于是试了一下xmonad，stumpwm，awesome。刚开始是先装了xmonad的，</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/01/23/notes-of-installing-archlinux/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/01/12/restart-again/">折腾，是我们对应然之事的承诺</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-01-12T19:59:00+08:00" pubdate data-updated="true">Jan 12<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>这是一个看似很文艺的标题，来源于前段时间一个很火的和谐事件。
-博客再一次大换血了，虽然离上一次并不是很久。
-由于各种原因，换回octopress了。</p>
-
-<h3>这次更换带来的好处也很明显了：</h3>
-
-<ul>
-<li>省了一笔费用，且基本没有数据丢失的顾虑</li>
-</ul>
-
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/01/12/restart-again/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
+    
+      <a class="prev" href="/blog/page/2/">&larr; Older</a>
     
     <a href="/blog/archives">Blog Archives</a>
     
@@ -320,6 +344,14 @@ mkisofs -o isoimage.iso ~/folder #从硬盘上的文件生成一个iso镜像
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/04/04/notes-of-web-intelligence-and-big-data-1-look/">Notes of Web Intelligence and Big Data - 1 Look</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/04/04/notes-of-web-intelligence-and-big-data/">Notes of Web Intelligence and Big Data - 0 Introduction</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/01/30/useful-tools-in-archlinux/">Useful tools in archlinux</a>
       </li>
     
@@ -329,14 +361,6 @@ mkisofs -o isoimage.iso ~/folder #从硬盘上的文件生成一个iso镜像
     
       <li class="post">
         <a href="/blog/2013/01/26/trace-of-wenzhou-longwan/">每一条龙，都有自己的湾</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/01/23/notes-of-installing-archlinux/">Notes of Archlinux</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/01/12/restart-again/">折腾，是我们对应然之事的承诺</a>
       </li>
     
   </ul>

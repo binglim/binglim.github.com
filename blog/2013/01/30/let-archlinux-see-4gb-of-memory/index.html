@@ -9,7 +9,8 @@
   <meta name="author" content="Bing">
 
   
-  <meta name="description" content="当初小手一抖，装的是32位的archlinux，但只能识别出笔记本4G内存上的3G，又不想重装系统，只能自己编译内核的pae版本。 yaourt linux-pae 编译的时候出现No space left on device的错误，这时把/etc/yaourtrc文件中的TMPDIR改掉就可以了 &hellip;">
+  <meta name="description" content="当初小手一抖，装的是32位的archlinux，但只能识别出笔记本4G内存上的3G，又不想重装系统，只能自己编译内核的pae版本。 yaourt linux-pae
+编译的时候出现No space left on device的错误，这时把/etc/yaourtrc文件中的TMPDIR改掉就可以了 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -28,6 +29,37 @@
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
   
 
@@ -93,12 +125,9 @@
   </header>
 
 
-<div class="entry-content"><p>当初小手一抖，装的是32位的archlinux，但只能识别出笔记本4G内存上的3G，又不想重装系统，只能自己编译内核的pae版本。</p>
-
-<pre><code>yaourt linux-pae
-</code></pre>
-
-<p>编译的时候出现No space left on device的错误，这时把/etc/yaourtrc文件中的TMPDIR改掉就可以了，因为yaourt默认实用/tmp文件夹进行编译，而linux下/tmp文件夹的大小又默认为内存的一半，因此把它改成TMPDIR=&#8221;/var/tmp&#8221;就可以了。</p>
+<div class="entry-content"><p>当初小手一抖，装的是32位的archlinux，但只能识别出笔记本4G内存上的3G，又不想重装系统，只能自己编译内核的pae版本。
+    yaourt linux-pae
+编译的时候出现No space left on device的错误，这时把/etc/yaourtrc文件中的TMPDIR改掉就可以了，因为yaourt默认实用/tmp文件夹进行编译，而linux下/tmp文件夹的大小又默认为内存的一半，因此把它改成TMPDIR=”/var/tmp”就可以了。</p>
 
 <p>编译完成后，编辑一下/boot/grub/grub.cfg文件，找到引导项中的linux和initrd，将/vmlinuz-linux和/initramfs-linux分别改为/vmlinuz-linux-pae和/initramfs-linux-pae-fallback.img。</p>
 
@@ -130,7 +159,7 @@
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/notes/'>Notes</a>
+    <a class='category' href='/blog/categories/linux/'>linux</a>
   
 </span>
 
@@ -170,6 +199,14 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/04/04/notes-of-web-intelligence-and-big-data-1-look/">Notes of Web Intelligence and Big Data - 1 Look</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/04/04/notes-of-web-intelligence-and-big-data/">Notes of Web Intelligence and Big Data - 0 Introduction</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/01/30/useful-tools-in-archlinux/">Useful tools in archlinux</a>
       </li>
     
@@ -179,14 +216,6 @@
     
       <li class="post">
         <a href="/blog/2013/01/26/trace-of-wenzhou-longwan/">每一条龙，都有自己的湾</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/01/23/notes-of-installing-archlinux/">Notes of Archlinux</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/01/12/restart-again/">折腾，是我们对应然之事的承诺</a>
       </li>
     
   </ul>

@@ -28,6 +28,37 @@
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
   
 
@@ -82,6 +113,34 @@
 
 <article>
   
+<h1><a href="/blog/2013/01/30/useful-tools-in-archlinux/">Useful tools in archlinux</a></h1>
+<time datetime="2013-01-30T18:47:00+08:00" pubdate><span class='month'>Jan</span> <span class='day'>30</span> <span class='year'>2013</span></time>
+
+<footer>
+  <span class="categories">posted in <a class='category' href='/blog/categories/linux/'>linux</a></span>
+</footer>
+
+
+</article>
+
+
+
+<article>
+  
+<h1><a href="/blog/2013/01/30/let-archlinux-see-4gb-of-memory/">让32位archlinux识别4G内存</a></h1>
+<time datetime="2013-01-30T16:41:00+08:00" pubdate><span class='month'>Jan</span> <span class='day'>30</span> <span class='year'>2013</span></time>
+
+<footer>
+  <span class="categories">posted in <a class='category' href='/blog/categories/linux/'>linux</a></span>
+</footer>
+
+
+</article>
+
+
+
+<article>
+  
 <h1><a href="/blog/2013/01/23/notes-of-installing-archlinux/">Notes of Archlinux</a></h1>
 <time datetime="2013-01-23T20:00:00+08:00" pubdate><span class='month'>Jan</span> <span class='day'>23</span> <span class='year'>2013</span></time>
 
@@ -106,6 +165,14 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/04/04/notes-of-web-intelligence-and-big-data-1-look/">Notes of Web Intelligence and Big Data - 1 Look</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/04/04/notes-of-web-intelligence-and-big-data/">Notes of Web Intelligence and Big Data - 0 Introduction</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/01/30/useful-tools-in-archlinux/">Useful tools in archlinux</a>
       </li>
     
@@ -115,14 +182,6 @@
     
       <li class="post">
         <a href="/blog/2013/01/26/trace-of-wenzhou-longwan/">每一条龙，都有自己的湾</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/01/23/notes-of-installing-archlinux/">Notes of Archlinux</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/01/12/restart-again/">折腾，是我们对应然之事的承诺</a>
       </li>
     
   </ul>

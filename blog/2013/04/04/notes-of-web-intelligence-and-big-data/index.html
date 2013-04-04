@@ -5,13 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Useful tools in archlinux - Bing's Blog</title>
+  <title>Notes of Web Intelligence and Big Data - 0 Introduction - Bing's Blog</title>
   <meta name="author" content="Bing">
 
   
-  <meta name="description" content="做个记录，以备不时之需…… cdrkit 刻录工具
-设置权限： gpasswd -a &lt;username&gt; optical 常用命令： wodim -v dev=/dev/cdrw isoimage.iso #刻录ISO
-dd if=/dev/cdrom of=/home/user/ &hellip;">
+  <meta name="description" content="Web Intelligence and Big Data on Coursera
+Coursera上的 Web Intelligence and Big Data 开始了，据传说这是一个广度胜于深度的课程，覆盖到了许多话题，对于并非专攻这个领域的人来说，应该是一个很好的知识普及材料。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +19,7 @@ dd if=/dev/cdrom of=/home/user/ &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://binglim.github.com/blog/2013/01/30/useful-tools-in-archlinux/">
+  <link rel="canonical" href="http://binglim.github.com/blog/2013/04/04/notes-of-web-intelligence-and-big-data/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -103,7 +102,7 @@ dd if=/dev/cdrom of=/home/user/ &hellip;">
   
   <header>
     
-      <h1 class="entry-title">Useful Tools in Archlinux</h1>
+      <h1 class="entry-title">Notes of Web Intelligence and Big Data - 0 Introduction</h1>
     
     
       <p class="meta">
@@ -119,83 +118,42 @@ dd if=/dev/cdrom of=/home/user/ &hellip;">
   
 
 
-<time datetime="2013-01-30T18:47:00+08:00" pubdate data-updated="true">Jan 30<span>th</span>, 2013</time>
+<time datetime="2013-04-04T12:10:00+08:00" pubdate data-updated="true">Apr 4<span>th</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>做个记录，以备不时之需……</p>
+<div class="entry-content"><h2 id="web-intelligence-and-big-data-on-coursera">Web Intelligence and Big Data on Coursera</h2>
+<p>Coursera上的 <em>Web Intelligence and Big Data</em> 开始了，据传说这是一个广度胜于深度的课程，覆盖到了许多话题，对于并非专攻这个领域的人来说，应该是一个很好的知识普及材料。课程是来自印度理工学院（IIT）的，老师也是明显的印度腔，但还不至于听不懂。说话的速度很慢，1.5倍速比较合适。这门课应该起不到练听力的效果了T_T。</p>
 
-<h4 id="cdrkit-">cdrkit 刻录工具</h4>
-<p>设置权限：</p>
+<p>这门课程的推荐教材有：</p>
 
-<pre><code>gpasswd -a &lt;username&gt; optical
-</code></pre>
+<p><em>Mining Massive Datasets</em> by J.D. Ullman and A. Rajaraman (Cambridge University Press, UK 2012)</p>
 
-<p>常用命令：</p>
+<p><em>Introduction to Information Retrieval</em> by Christopher Manning, Prabhakar Raghavan and Hinrich Schutze (Cambridge University Press, UK 2008)</p>
 
-<pre><code>wodim -v dev=/dev/cdrw isoimage.iso #刻录ISO
-dd if=/dev/cdrom of=/home/user/isoimage.iso #从光盘生成ISO
-mkisofs -o isoimage.iso ~/folder #从硬盘上的文件生成一个iso镜像
-</code></pre>
+<p><em>Enterprise Cloud Computing</em> by Gautam Shroff (Cambridge University Press, UK 2010)
+<!--more-->
+前两本书都可以在斯坦福的网站上下到，第三个是教授本人的作品。第一本书比较新，前段时间在各大购书网站上还是很火的，某人那里还有一本，顺手拿来看看。书的封面我很喜欢，纸张质量也很不错，让人很有看的欲望。前两本书都有人翻译过，而且是同一个人翻译的！</p>
 
-<h4 id="udevil-">udevil 挂载工具，无需密码</h4>
-<p>常用命令：<!--more--></p>
+<p>更多的，只能等到学习后再说了……</p>
 
-<pre><code>udevil mount /dev/sdd1 #挂载
-udevil umount /dev/sdd1 #卸载
-devmon #自动挂载
-devmon -a #全部挂载
-devmon -u #全部卸载
-</code></pre>
+<h2 id="introduction">Introduction</h2>
 
-<h4 id="chromium-">chromium 不解释</h4>
-<p>#### alsa-utils 声音控制
-含有alsamixier用户空间工具，在终端中配置声卡。安装alsa-oss如果需要OSS应用程序与软件混音协同工作。
-#### synaptics 触摸板
-#### cpupower CPU频率控制</p>
+<h3 id="turing-test">图灵测试（Turing Test）</h3>
+<p>图灵测试：一个人通过问两个对象（人和机器）问题来判断哪个是人，哪个是机器，若问了若干问题后仍无法判断，则机器通过图灵测试。</p>
 
-<pre><code>cpupower frequency-info #获取CPU信息
-</code></pre>
+<p>反向图灵测试（Reverse Turing Test）则是由机器提问来判断人和机器，如验证码（CAPTCHA）。</p>
 
-<h4 id="richad-huanghttphuanghuachaocn">抄袭<a href="http://huanghuachao.cn">Richad Huang</a></h4>
-<ul>
-  <li>ranger 文件管理</li>
-  <li>mpd ncmpcpp 音乐播放</li>
-  <li>htop 进程监管</li>
-  <li>wicd 网络控制</li>
-  <li>xmond + slim 窗口管理+登录管理</li>
-</ul>
+<h3 id="section">大数据技术</h3>
+<p>Google, Facebook等并不适用传统的数据库来处理大数据，而事使用大规模并行计算和Map-Reduce范式。</p>
 
-<h4 id="section">各种作图</h4>
-<ul>
-  <li>gimp linux中的photoshop</li>
-  <li>dia 作各种图，但觉得不好看</li>
-  <li>xmind 思维导图</li>
-  <li>astah-community UML</li>
-</ul>
+<p>数据的智能：反应智能（Reactive Intelligence）和预测智能（Predictive Intelligence）。</p>
 
-<p><strong>几个不错的在线作图网站</strong></p>
-
-<ul>
-  <li><a href="https://cacoo.com/diagrams/">cacoo</a></li>
-  <li><a href="https://gomockingbird.com/mockingbird/">mockingbird</a></li>
-  <li><a href="http://lumzy.com/app/">lumzy</a></li>
-  <li><a href="http://www.gliffy.com/gliffy/">gliffy</a></li>
-  <li><a href="http://www.toondoo.com/createToon.do">toondoo</a> 这个是弄漫画的</li>
-</ul>
-
-<h4 id="dmenu-">dmenu 快速启动</h4>
-
-<pre><code>dmenu_run #运行
-</code></pre>
-
-<h4 id="libreoffice-">libreoffice 不解释</h4>
-<p>#### fcitx 不解释
-#### emacs + auctex 不解释
-#### 还有。。。</p>
+<p>使用人工智能和大数据来预测未来：
+Search(Look) -&gt; Machine Learning(Listen) -&gt; Information Extraction(Learn) -&gt; Reasoning(Connect) -&gt; Data Mining(Predict) -&gt; Optimization(Correct).</p>
 </div>
 
 
@@ -218,12 +176,12 @@ devmon -u #全部卸载
   
 
 
-<time datetime="2013-01-30T18:47:00+08:00" pubdate data-updated="true">Jan 30<span>th</span>, 2013</time>
+<time datetime="2013-04-04T12:10:00+08:00" pubdate data-updated="true">Apr 4<span>th</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/linux/'>linux</a>
+    <a class='category' href='/blog/categories/artificial-intelligence/'>Artificial Intelligence</a>, <a class='category' href='/blog/categories/data-mining/'>Data Mining</a>, <a class='category' href='/blog/categories/web-intelligence-and-big-data/'>Web Intelligence and Big Data</a>
   
 </span>
 
@@ -239,10 +197,10 @@ devmon -u #全部卸载
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/01/30/let-archlinux-see-4gb-of-memory/" title="Previous Post: 让32位archlinux识别4G内存">&laquo; 让32位archlinux识别4G内存</a>
+        <a class="basic-alignment left" href="/blog/2013/01/30/useful-tools-in-archlinux/" title="Previous Post: Useful tools in archlinux">&laquo; Useful tools in archlinux</a>
       
       
-        <a class="basic-alignment right" href="/blog/2013/04/04/notes-of-web-intelligence-and-big-data/" title="Next Post: Notes of Web Intelligence and Big Data - 0 Introduction">Notes of Web Intelligence and Big Data - 0 Introduction &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2013/04/04/notes-of-web-intelligence-and-big-data-1-look/" title="Next Post: Notes of Web Intelligence and Big Data - 1 Look">Notes of Web Intelligence and Big Data - 1 Look &raquo;</a>
       
     </p>
   </footer>
@@ -338,8 +296,8 @@ devmon -u #全部卸载
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://binglim.github.com/blog/2013/01/30/useful-tools-in-archlinux/';
-        var disqus_url = 'http://binglim.github.com/blog/2013/01/30/useful-tools-in-archlinux/';
+        var disqus_identifier = 'http://binglim.github.com/blog/2013/04/04/notes-of-web-intelligence-and-big-data/';
+        var disqus_url = 'http://binglim.github.com/blog/2013/04/04/notes-of-web-intelligence-and-big-data/';
         var disqus_script = 'embed.js';
       
     (function () {
